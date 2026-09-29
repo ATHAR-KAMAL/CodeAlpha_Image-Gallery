@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Image Gallery</h1>
+        <p>Explore beautiful moments through pictures</p>
+    </header>
+
+    <!-- Category Buttons -->
+    <div class="filters">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('animals')">Animals</button>
+        <button onclick="filterImages('travel')">Travel</button>
+    </div>
+
+    <!-- Gallery -->
+    <main class="gallery">
+
+        <div class="gallery-item nature">
+
+            <img src="images/image1.jpg"
+                 alt="Nature"
+                 onclick="openLightbox(0)">
+        </div>
+
+        <div class="gallery-item animals">
+            <img src="images/image2.jpg"
+                 alt="Animal"
+                 onclick="openLightbox(1)">
+        </div>
+
+        <div class="gallery-item travel">
+            <img src="images/image3.jpg"
+                 alt="Travel"
+                 onclick="openLightbox(2)">
+        </div>
+
+        <div class="gallery-item nature">
+            <img src="images/image4.jpg"
+                 alt="Nature"
+                 onclick="openLightbox(3)">
+        </div>
+
+        <div class="gallery-item animals">
+            <img src="images/image5.jpg"
+                 alt="Animal"
+                 onclick="openLightbox(4)">
+        </div>
+
+        <div class="gallery-item travel">
+            <img src="images/image6.jpg"
+                 alt="Travel"
+                 onclick="openLightbox(5)">
+        </div>
+
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+
+        <span class="close" onclick="closeLightbox()">&times;</span>
+
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+
+        <img id="lightbox-img" src="" alt="Preview">
+
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+
+    </div>
+
+    <footer>
+        <p>© 2026 My Image Gallery</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
